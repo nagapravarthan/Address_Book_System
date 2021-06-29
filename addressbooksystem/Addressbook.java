@@ -1,139 +1,44 @@
 package addressbooksystem;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
+public class AddressBook {
 
-public class Addressbook {
+	 String firstName, lastName, address, city, state, email;
+	    long phoneNumber, zipCode;
 
-		// TODO Auto-generated method stub
-	
-		
-			 static Scanner scanner = new Scanner(System.in);
-			    static ArrayList<Contact> contactArrayList = new ArrayList<Contact>();
+	    public AddressBook(String firstName, String lastName, String address, String city, String state, String email, long phoneNumber, long zipCode) {
+	        this.firstName = firstName;
+	        this.lastName = lastName;
+	        this.address = address;
+	        this.city = city;
+	        this.state = state;
+	        this.email = email;
+	        this.phoneNumber = phoneNumber;
+	        this.zipCode = zipCode;
+	    }
+	        public static void main(String[] args) {
+	            @SuppressWarnings("resource")
+				Scanner scanner = new Scanner(System.in);
+	            System.out.print("Enter first name: ");
+	            String firstName = scanner.next();
+	            System.out.print("Enter last name: ");
+	            String lastName = scanner.next();
+	            System.out.print("Enter address: ");
+	            String address = scanner.next();
+	            System.out.print("Enter city: ");
+	            String city = scanner.next();
+	            System.out.print("Enter state: ");
+	            String state = scanner.next();
+	            System.out.print("Enter zip: ");
+	            long zip = scanner.nextLong();
+	            System.out.print("Enter phone no: ");
+	            long phNumber = scanner.nextLong();
+	            System.out.print("Enter email: ");
+	            String email = scanner.next();
 
-			        public static void main(String[] args) {
-			        	boolean flag = true;
-			            while (flag) {
-			        	Contact contact = new Contact();
+	            @SuppressWarnings("unused")
+				AddressBook addressBook = new AddressBook(firstName, lastName, address, city, state, email, phNumber, zip);
 
-			        	System.out.println("Press 1 - Add contact\nPress 2 - Edit Contact\nPress 3 - Delete contact");
-			            int choice = scanner.nextInt();
-
-			            switch (choice) {
-			                case 1:
-			                    addContact(contact, contactArrayList);
-			                    break;
-			                case 2:
-			                    editContact(contact);
-			                case 3:
-			                    deleteContact(contact);
-			                    break;
-			                default:
-			                	flag = false;
-			                    System.out.println("Invalid input");
-			            }
-
-			            }
-
-			        }
-
-			        // adding contact to the address book
-			        public static void addContact(Contact contact, ArrayList<Contact> contactArrayList) {
-			        	
-			        
-			            System.out.print("Enter first name: ");
-			            String firstName = scanner.next();
-			            contact.setFirstName(firstName);
-			           
-			            System.out.print("Enter last name: ");
-			            String lastName = scanner.next();
-			            contact.setLastName(lastName);
-			            
-			            System.out.print("Enter address: ");
-			            String address = scanner.next();
-			            contact.setAddress(address);
-			            
-			            System.out.print("Enter city: ");
-			            String city = scanner.next();
-			            contact.setCity(city);
-			            
-			            System.out.print("Enter state: ");
-			            String state = scanner.next();
-			            contact.setState(state);
-			            
-			            System.out.print("Enter zip: ");
-			            long zip = scanner.nextLong();
-			            contact.setZipCode(zip);
-			            
-			            System.out.print("Enter phone no: ");
-			            long phNumber = scanner.nextLong();
-			            contact.setPhoneNumber(phNumber);
-			            
-			            System.out.print("Enter email: ");
-			            String email = scanner.next();
-			            contact.setEmail(email);
-
-			            contactArrayList.add(contact);
-
-			            for (Contact c: contactArrayList) {
-			                System.out.println(c.getFirstName() + " " + c.getLastName() + " " + c.getAddress() + " " + c.getCity() + " " + c.getState() + " "  + c.getZipCode()
-			                        + " " + c.getPhoneNumber() + " " + c.getEmail());
-			            }
-			        }
-			    
-			     // edit the contact
-			        public static void editContact(Contact contact) {
-			            System.out.print("Enter a first name: ");
-			            String firstName = scanner.next();
-			            System.out.print("Enter a last name: ");
-			            String lastName = scanner.next();
-			            for (int i=0; i<contactArrayList.size(); i++) {
-			                if (contactArrayList.get(i).getFirstName().equals(firstName) && contactArrayList.get(i).getLastName().equals(lastName)) {
-			                    System.out.print("Enter address: ");
-			                    String address = scanner.next();
-			                    contact.setAddress(address);
-
-			                    System.out.print("Enter city: ");
-			                    String city = scanner.next();
-			                    contact.setCity(city);
-
-			                    System.out.print("Enter state: ");
-			                    String state = scanner.next();
-			                    contact.setState(state);
-
-			                    System.out.print("Enter zip: ");
-			                    long zip = scanner.nextLong();
-			                    contact.setZipCode(zip);
-
-			                    System.out.print("Enter phone no: ");
-			                    long phNumber = scanner.nextLong();
-			                    contact.setPhoneNumber(phNumber);
-
-			                    System.out.print("Enter email: ");
-			                    String email = scanner.next();
-			                    contact.setEmail(email);
-
-			                    for (Contact c: contactArrayList) {
-			                        System.out.println(c.getFirstName() + " " + c.getLastName() + " " + c.getAddress() + " " + c.getCity() + " " + c.getState() + " "  + c.getZipCode()
-			                                + " " + c.getPhoneNumber() + " " + c.getEmail());
-			                    }
-			                }
-			            }
-			        }
-		     //deleting the contact
-		    public static void deleteContact(Contact contact) {
-		    System.out.print("Enter a first name: ");
-		    String firstName = scanner.next();
-		    System.out.print("Enter a last name: ");
-		    String lastName = scanner.next();
-		    for (int i=0; i<contactArrayList.size(); i++) {
-		        if (contactArrayList.get(i).getFirstName().equals(firstName) && contactArrayList.get(i).getLastName().equals(lastName)) {
-		            contactArrayList.remove(i);
-		        }
-		    }
-		
-		
-	}
-
+	        }
 }
