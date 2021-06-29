@@ -82,4 +82,44 @@ public static void main(String[] args) {
         this.zipCode = zipCode;
     }
 
+	public void setfirstName(String firstName2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setzip(long zip) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setphNumber(long phNumber) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setemail(String email2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void state(String state2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setcity(String city2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setaddress(String address2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setlastName(String lastName2) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
